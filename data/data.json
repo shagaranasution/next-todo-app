@@ -1,0 +1,18 @@
+{
+  "todoList": [
+    {
+      "id": 1,
+      "name": "Read book", 
+      "status": "new",
+      "isCompleted": false,
+      "isRemoved": false
+    },
+    {
+      "id": 2,
+      "name": "Exercise",
+      "status": "new",
+      "isCompleted": false,
+      "isRemoved": false
+    }
+  ]
+}
