@@ -23,7 +23,7 @@ export async function POST(request) {
   const data = JSON.parse(fs.readFileSync(dataFilePath, 'utf-8'));
   const { name, isCompleted } = await request.json();
 
-  if (typeof name !== 'string' || name.trim().length === '') {
+  if (typeof name !== 'string' || name.trim() === '') {
     const body = JSON.stringify({
       success: false,
       message: 'Fail to create a task.',

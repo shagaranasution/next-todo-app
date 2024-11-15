@@ -4,11 +4,5 @@
     "name": "Morning exercise",
     "isCompleted": true,
     "isRemoved": false
-  },
-  {
-    "id": 2,
-    "name": "Meeting",
-    "isCompleted": true,
-    "isRemoved": false
   }
 ]
