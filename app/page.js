@@ -14,9 +14,9 @@ export default function Home() {
 
   const fetchTodos = async () => {
     const response = await fetch('/api/todo-items');
-    const todos = await response.json();
+    const result = await response.json();
 
-    setTodos(todos);
+    setTodos(result.data);
   };
 
   const postTodo = async () => {

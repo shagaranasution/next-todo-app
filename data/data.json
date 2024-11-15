@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Morning exercise",
-    "isCompleted": false,
+    "isCompleted": true,
     "isRemoved": false
   },
   {
