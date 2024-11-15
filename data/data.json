@@ -1,14 +1,14 @@
 [
   {
     "id": 1,
-    "name": "Read book",
+    "name": "Morning exercise",
     "isCompleted": false,
     "isRemoved": false
   },
   {
     "id": 2,
-    "name": "Doing school homework",
-    "isCompleted": false,
+    "name": "Meeting",
+    "isCompleted": true,
     "isRemoved": false
   }
 ]

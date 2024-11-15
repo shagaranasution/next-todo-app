@@ -29,3 +29,46 @@ export async function POST(request) {
     headers: { 'Content-Type': 'application/json' },
   });
 }
+
+export async function PUT(request) {
+  const data = JSON.parse(fs.readFileSync(dataFilePath, 'utf-8'));
+  const taskId = await request.json();
+  const updatedData = data.map((item) => {
+    if (item.id === taskId) {
+      return {
+        ...item,
+        isCompleted: !item.isCompleted,
+      };
+    }
+
+    return item;
+  });
+  fs.writeFileSync(dataFilePath, JSON.stringify(updatedData, null, 2));
+
+  return new Response(
+    JSON.stringify({
+      code: 200,
+      message: `Item has been successfully updated for id = ${taskId}`,
+    }),
+    {
+      headers: { 'Content-Type': 'application/json' },
+    }
+  );
+}
+
+export async function DELETE(request) {
+  const data = JSON.parse(fs.readFileSync(dataFilePath, 'utf-8'));
+  const taskId = await request.json();
+  const newData = data.filter((item) => item.id !== taskId);
+  fs.writeFileSync(dataFilePath, JSON.stringify(newData, null, 2));
+
+  return new Response(
+    JSON.stringify({
+      code: 200,
+      message: `Item has been successfully deleted for id = ${taskId}`,
+    }),
+    {
+      headers: { 'Content-Type': 'application/json' },
+    }
+  );
+}

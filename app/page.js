@@ -45,6 +45,26 @@ export default function Home() {
     postTodo();
   };
 
+  const handleTodoItemToggleClick = async (selectedId) => {
+    await fetch('/api/todo-items', {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/js' },
+      body: JSON.stringify(selectedId),
+    });
+
+    fetchTodos();
+  };
+
+  const handleTodoItemDelete = async (selectedId) => {
+    await fetch('/api/todo-items', {
+      method: 'DELETE',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(selectedId),
+    });
+
+    fetchTodos();
+  };
+
   return (
     <div className="flex flex-col flex-1 gap-4">
       <h1 className="text-4xl font-bold text-center">Todo App</h1>
@@ -63,13 +83,23 @@ export default function Home() {
         </button>
       </section>
       <section className="flex flex-col gap-4">
-        {todos.map((todo) => (
-          <TodoItem
-            key={todo.id.toString()}
-            name={todo.name}
-            completed={todo.isCompleted}
-          />
-        ))}
+        {todos.length == 0 && (
+          <p className="text-center">
+            Yay! 🎉 All tasks have been completed.
+            <br />
+            Do you have any new ones?
+          </p>
+        )}
+        {todos.length > 0 &&
+          todos.map((todo) => (
+            <TodoItem
+              key={todo.id.toString()}
+              name={todo.name}
+              completed={todo.isCompleted}
+              onToggle={() => handleTodoItemToggleClick(todo.id)}
+              onDelete={() => handleTodoItemDelete(todo.id)}
+            />
+          ))}
       </section>
     </div>
   );
