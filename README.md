@@ -36,19 +36,29 @@ Before running the app, ensure you have the following installed:
 
 Follow these steps to run the app locally:
 
-### 1. Clone the Repository
+  **1. Clone the Repository**:
 
-````bash
-git clone https://github.com/shagaranasution/next-todo-app.git
-cd next-todo-app
+   ```bash
+   git clone https://github.com/shagaranasution/next-todo-app.git
+   cd next-todo-app
 
-### 2. Install Dependencies
-```bash
-nmp install
+   ```
 
-### 3. Run the Development Server
-```bash
-npm run dev
+  **2. Install Dependencies**:
+
+
+  ```bash
+  nmp install
+  ```
+
+
+  **3. Run the Development Server**:
+
+
+  ```bash
+  npm run dev
+  ```
+
 
 Access the app at http://localhost:3000.
 
@@ -63,4 +73,3 @@ This app uses `data.json` for task storage, which is intended for demonstration 
 - Add database integration (e.g., MongoDB, PostgreSQL) for task storage.
 - Implement user authentication.
 - Enhance accessibility features (e.g., keyboard navigation, ARIA roles).
-````
