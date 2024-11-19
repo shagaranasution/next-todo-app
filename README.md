@@ -10,29 +10,23 @@ This project is designed as a portfolio piece to demonstrate proficiency with mo
 - **Responsive Design:** Optimized for mobile, tablet, and desktop devices.
 - **Modern Stack:** Built with Next.js 15.0.3 App Router, React, and Tailwind CSS.
 
-## Technologies Used
-
-### Core Frameworks and Libraries
+## Tech Stack
 
 - **Next.js 15.0.3**
 - **React 19.0.0**
-
-### Styling
-
 - **Tailwind CSS 3.4.1**
-
-### Code Quality
-
 - **ESLint** with `eslint-config-next`
 
-## Prerequisites
+## Installation and Setup
+
+### Prerequisites
 
 Before running the app, ensure you have the following installed:
 
 - **Node.js** (version 18 or newer)
 - **npm** (or **yarn**) for dependency management
 
-## Getting Started
+### Getting Started
 
 Follow these steps to run the app locally:
 
